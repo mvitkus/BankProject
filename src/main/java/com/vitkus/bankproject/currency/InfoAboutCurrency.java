@@ -7,10 +7,13 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
+
+import static java.lang.StrictMath.round;
 
 public class InfoAboutCurrency {
 
@@ -67,10 +70,13 @@ public class InfoAboutCurrency {
         double rate2 = Double.parseDouble(currencyRateStartOfRange);
         double pokytisDouble;
 
+
         if (rate1 == rate2) {
             pokytisDouble = 0;
         } else pokytisDouble = ((rate1 * 100) / rate2) - 100;
 
+        DecimalFormat df = new DecimalFormat("#.####");
+        pokytisDouble = Double.valueOf(df.format(pokytisDouble));
         String pokytis = String.valueOf(pokytisDouble);
         Calculation = "\nValiuta: " + currency + "| Periodo pradŽia: " + periodStart + ", kursas: " + currencyRateStartOfRange + ", Periodo pabaiga: " + periodEnd + ", kursas: " + currencyRateEndOfRange + " Pokytis: " + pokytis + "%\n";
 
