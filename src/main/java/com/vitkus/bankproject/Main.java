@@ -1,6 +1,6 @@
 package com.vitkus.bankproject;
 
-import com.vitkus.bankproject.Currency.InfoAboutCurrency;
+import com.vitkus.bankproject.currency.InfoAboutCurrency;
 import com.vitkus.bankproject.dates.Dates;
 
 import java.util.Scanner;

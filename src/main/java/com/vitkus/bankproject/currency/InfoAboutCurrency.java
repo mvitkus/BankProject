@@ -1,4 +1,4 @@
-package com.vitkus.bankproject.Currency;
+package com.vitkus.bankproject.currency;
 
 
 import java.io.BufferedReader;
